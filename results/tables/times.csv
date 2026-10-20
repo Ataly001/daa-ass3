@@ -1,0 +1,16 @@
+algorithm,graph,V,E,time_us
+Kruskal,Small,10,30,29.1
+Prim,Small,10,30,7.6
+Kruskal,Medium,100,500,144.5
+Prim,Medium,100,500,77.2
+Kruskal,Large,1000,5000,533.9
+Prim,Large,1000,5000,539.3
+Topological sort (DAG),Small,10,30,10.9
+Topological sort (DAG),Medium,100,500,21.7
+Topological sort (DAG),Large,1000,5000,138.6
+SCC (Kosaraju),Small,10,30,25.9
+SCC (Kosaraju),Medium,100,500,56.1
+SCC (Kosaraju),Large,1000,5000,319.2
+Dijkstra,Small,10,30,18.0
+Dijkstra,Medium,100,500,26.4
+Dijkstra,Large,1000,5000,207.9
