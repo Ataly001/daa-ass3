@@ -4,6 +4,7 @@ import graph.*;
 import mst.*;
 import shortestpath.*;
 import java.io.*;
+import java.util.*;
 
 public class Experiments {
     static final long SEED = 42;
@@ -62,7 +63,7 @@ public class Experiments {
     }
 
     static String f1(double x) {
-        return String.format("%.1f", x);
+        return String.format(Locale.US, "%.1f", x);
     }
 
     static void addTime(String algo, int i, double us) {
@@ -130,7 +131,7 @@ public class Experiments {
                 k.run(g, comp[v], rank[v]);
                 sum += System.nanoTime() - t0;
             }
-            String perFind = String.format("%.2f", k.steps / (double) k.finds);
+            String perFind = String.format(Locale.US, "%.2f", k.steps / (double) k.finds);
             md.append(row(label[v], k.finds, k.steps, perFind, f1(avgUs(sum))));
         }
         md.append("\n");
@@ -150,7 +151,7 @@ public class Experiments {
                 sum += System.nanoTime() - t0;
                 steps = d.steps;
             }
-            md.append(row(label[v], steps, String.format("%.2f", avgUs(sum) / 1000.0)));
+            md.append(row(label[v], steps, String.format(Locale.US, "%.2f", avgUs(sum) / 1000.0)));
         }
         md.append("\n");
     }
